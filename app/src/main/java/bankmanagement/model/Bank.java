@@ -1,2 +1,4 @@
-package bankmanagement.model;public class Bank {
+package bankmanagement.model;
+
+public class Bank {
 }

@@ -1,2 +1,4 @@
-package bankmanagement.model;public class Transaction {
+package bankmanagement.model;
+
+public class Transaction {
 }
