@@ -11,7 +11,7 @@ public class Chequing extends Account {
 
     @Override
     public void deposit(double amount) {
-
+        super.setBalance(super.round(super.getBalance() + amount));
     }
 
     @Override
@@ -23,8 +23,8 @@ public class Chequing extends Account {
             return true;
         } else {
             super.setBalance(super.round(super.getBalance() - amount));
-            return true;
         }
+        return true;
     }
 
     public Chequing (Chequing source) {

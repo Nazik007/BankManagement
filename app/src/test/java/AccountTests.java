@@ -42,4 +42,28 @@ public class AccountTests {
         accounts[1].withdraw(100);
         Assertions.assertEquals(2136.60, accounts[1].getBalance());
     }
+
+    @Test
+    public void withdrawalInterest () {
+        accounts[2].withdraw(2434.31);
+        Assertions.assertEquals(5020.31, accounts[2].getBalance());
+    }
+
+    @Test
+    public void withdrawalLimit () {
+        accounts[2].withdraw(7463.96);
+        Assertions.assertEquals(2537.31, accounts[2].getBalance());
+    }
+
+    @Test
+    public void deposit () {
+        accounts[0].deposit(5000);
+        Assertions.assertEquals(6524.51, accounts[0].getBalance());
+    }
+
+    @Test
+    public void loadDeposit () {
+        accounts[2].deposit(1000);
+        Assertions.assertEquals(1537.31, accounts[2].getBalance());
+    }
 }
