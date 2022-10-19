@@ -23,6 +23,11 @@ public class Loan extends Account{
         return true;
     }
 
+    @Override
+    public Account clone() {
+        return new Loan(this);
+    }
+
     public Loan (Loan source) {
         super(source);
     }

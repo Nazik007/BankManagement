@@ -13,6 +13,8 @@ public class Chequing extends Account implements Taxable {
         super(id, name, balance);
     }
 
+
+
     @Override
     public void deposit(double amount) {
         super.setBalance(super.round(super.getBalance() + amount));
@@ -29,6 +31,11 @@ public class Chequing extends Account implements Taxable {
             super.setBalance(super.round(super.getBalance() - amount));
         }
         return true;
+    }
+
+    @Override
+    public Account clone() {
+        return new Chequing(this);
     }
 
     public Chequing (Chequing source) {
