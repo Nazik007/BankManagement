@@ -1,7 +1,10 @@
+package bankmanagement;
+
 import bankmanagement.model.account.Account;
 import bankmanagement.model.account.Chequing;
 import bankmanagement.model.account.Loan;
 import bankmanagement.model.account.Savings;
+import bankmanagement.model.account.impl.Taxable;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -66,4 +69,6 @@ public class AccountTests {
         accounts[2].deposit(1000);
         Assertions.assertEquals(1537.31, accounts[2].getBalance());
     }
+
+
 }
